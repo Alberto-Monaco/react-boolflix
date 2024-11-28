@@ -16,7 +16,11 @@ export default function AppMain({ movies }) {
 									className='card-img-top'
 									src={`https://image.tmdb.org/t/p/w780/${movie.poster_path}`}
 									alt={movie.title || movie.name}
-									style={{ height: '300px' }}
+									style={{
+										height: '400px',
+										backgroundSize: 'cover',
+										backgroundPosition: 'center'
+									}}
 								/>
 								<div className='p-3 card-title'>
 									<h3 className='text-danger'>{movie.title || movie.name}</h3>
@@ -30,7 +34,7 @@ export default function AppMain({ movies }) {
 									<p>
 										Lingua originale:
 										{getFlag(movie.original_language) === 'unknown' ? (
-											` ${movie.original_language} (non trovata nazionalità)`
+											` non trovata nazionalità`
 										) : (
 											<img
 												className='mx-2 flag-icon'
