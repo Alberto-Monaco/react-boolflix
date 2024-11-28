@@ -7,8 +7,8 @@ export default function MovieCard({ movie }) {
 	function getVoteBaseFive(voteAverage) {
 		return Math.ceil(voteAverage / 2)
 	}
-	function Stars(rating) {
-		const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating)
+	function Stars(vote_average) {
+		const stars = '★'.repeat(vote_average) + '☆'.repeat(5 - vote_average)
 		return stars
 	}
 	return (
