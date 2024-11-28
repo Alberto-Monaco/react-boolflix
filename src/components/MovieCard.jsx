@@ -4,11 +4,18 @@ export default function MovieCard({ movie }) {
 	function getFlag(languageCode) {
 		return languageToFlag[languageCode] || 'unknown'
 	}
+	function getVoteBaseFive(voteAverage) {
+		return Math.ceil(voteAverage / 2)
+	}
+	function Stars(rating) {
+		const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating)
+		return stars
+	}
 	return (
 		<div className='card  bg-dark text-white'>
 			<img
 				className='card-img-top'
-				src={`https://image.tmdb.org/t/p/w780/${movie.poster_path}`}
+				src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
 				alt={movie.title || movie.name}
 				style={{
 					height: '400px',
@@ -24,7 +31,9 @@ export default function MovieCard({ movie }) {
 			</div>
 			<div className='card-body'>
 				<p>Titolo originale: {movie.original_title || movie.original_name}</p>
-				<p>Voto: {Math.ceil(movie.vote_average / 2)}/5</p>
+				<p>
+					Voto: <span style={{ color: 'gold' }}>{Stars(getVoteBaseFive(movie.vote_average))}</span>
+				</p>
 				<p>
 					Lingua originale:
 					{getFlag(movie.original_language) === 'unknown' ? (
