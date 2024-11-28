@@ -24,7 +24,7 @@ export default function MovieCard({ movie }) {
 			</div>
 			<div className='card-body'>
 				<p>Titolo originale: {movie.original_title || movie.original_name}</p>
-				<p>Voto: {movie.vote_average}</p>
+				<p>Voto: {Math.ceil(movie.vote_average / 2)}/5</p>
 				<p>
 					Lingua originale:
 					{getFlag(movie.original_language) === 'unknown' ? (
