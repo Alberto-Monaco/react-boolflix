@@ -235,7 +235,12 @@ const languageToFlag = {
 	eh: 'eh',
 	ye: 'ye',
 	zm: 'zm',
-	zw: 'zw'
+	zw: 'zw',
+	zh: 'cn',
+	hi: 'in',
+	ja: 'jp',
+	ko: 'kr',
+	ru: 'ru'
 }
 
 export default languageToFlag
