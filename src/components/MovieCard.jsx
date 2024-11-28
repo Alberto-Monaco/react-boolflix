@@ -37,7 +37,7 @@ export default function MovieCard({ movie }) {
 				<p>
 					Lingua originale:
 					{getFlag(movie.original_language) === 'unknown' ? (
-						` non trovata nazionalità`
+						`${movie.original_language} non trovata nazionalità`
 					) : (
 						<img
 							className='mx-2 flag-icon'
