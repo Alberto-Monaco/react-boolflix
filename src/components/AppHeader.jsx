@@ -1,8 +1,7 @@
-export default function AppHeader({ searchText, setSearchText }) {
+export default function AppHeader({ searchText, setSearchText, onSearch }) {
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		console.log(searchText)
-		// Qui dopo gestiremo la chiamata API
+		onSearch()
 	}
 
 	return (
