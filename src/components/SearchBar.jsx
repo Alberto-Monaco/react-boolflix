@@ -11,7 +11,7 @@ export default function SearchBar({ searchText, setSearchText, handleSearch }) {
 				name='search-text'
 				type='text'
 				className='form-control'
-				placeholder='Cerca un film o una serie TV...'
+				placeholder='🔍Cerca un film o una serie TV...'
 				value={searchText}
 				onChange={(e) => setSearchText(e.target.value)}
 			/>
