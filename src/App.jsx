@@ -8,7 +8,7 @@ function App() {
 
 	return (
 		<>
-			<AppHeader />
+			<AppHeader searchText={searchText} setSearchText={setSearchText} />
 			<AppMain />
 		</>
 	)
