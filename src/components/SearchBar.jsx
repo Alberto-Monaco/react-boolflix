@@ -9,7 +9,7 @@ export default function SearchBar({ searchText, setSearchText, handleSearch }) {
 			<input
 				id='search-text'
 				name='search-text'
-				type='text'
+				type='search'
 				className='form-control'
 				placeholder='🔍Cerca un film o una serie TV...'
 				value={searchText}
