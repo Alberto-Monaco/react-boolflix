@@ -1,5 +1,5 @@
 export default function AppHeader({ searchText, setSearchText, handleSearch }) {
-	const handleSubmit = (e) => {
+	function handleSubmit(e) {
 		e.preventDefault()
 		handleSearch()
 	}
@@ -7,7 +7,9 @@ export default function AppHeader({ searchText, setSearchText, handleSearch }) {
 	return (
 		<header className='bg-dark py-3'>
 			<div className='container d-flex align-items-center justify-content-between'>
-				<h1 className='mb-0 text-danger'>Boolflix</h1>
+				<a href='/'>
+					<h1 className='mb-0 text-danger'>Boolflix</h1>
+				</a>
 
 				<form htmlFor='search-text' className='search-bar w-50 d-flex justify-content-end ' onSubmit={handleSubmit}>
 					<input

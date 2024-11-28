@@ -6,7 +6,7 @@ function App() {
 	const [searchText, setSearchText] = useState('')
 	const [movies, setMovies] = useState([])
 
-	const handleSearch = () => {
+	function handleSearch() {
 		const API_URL = `https://api.themoviedb.org/3/search/multi?api_key=7ca648ffa788e60656d044fa86345f4b&query=${searchText}`
 
 		fetch(API_URL)
