@@ -1,7 +1,7 @@
-export default function AppHeader({ searchText, setSearchText, onSearch }) {
+export default function AppHeader({ searchText, setSearchText, handleSearch }) {
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		onSearch()
+		handleSearch()
 	}
 
 	return (

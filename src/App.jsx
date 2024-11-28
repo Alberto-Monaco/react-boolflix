@@ -20,7 +20,7 @@ function App() {
 
 	return (
 		<>
-			<AppHeader searchText={searchText} setSearchText={setSearchText} onSearch={handleSearch} />
+			<AppHeader searchText={searchText} setSearchText={setSearchText} handleSearch={handleSearch} />
 			<AppMain movies={movies} />
 		</>
 	)
