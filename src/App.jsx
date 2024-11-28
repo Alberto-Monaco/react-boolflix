@@ -21,7 +21,7 @@ function App() {
 	return (
 		<>
 			<AppHeader searchText={searchText} setSearchText={setSearchText} onSearch={handleSearch} />
-			<AppMain />
+			<AppMain movies={movies} />
 		</>
 	)
 }
