@@ -35,6 +35,8 @@ header a {
 }
 
 .card:hover {
-    background-image: none !important;
+
+    background-blend-mode: overlay;
+
 
 }
