@@ -1,9 +1,9 @@
-/* import languageToFlag from '../db/languageFlags' */
+import languageToFlag from '../db/languageFlags'
 
 export default function MovieCard({ movie }) {
-	/* 	function getFlag(languageCode) {
+	function getFlag(languageCode) {
 		return languageToFlag[languageCode] || 'unknown'
-	} */
+	}
 	function getVoteBaseFive(voteAverage) {
 		return Math.ceil(voteAverage / 2)
 	}
@@ -37,24 +37,14 @@ export default function MovieCard({ movie }) {
 					) : (
 						<img
 							className='mx-2 flag-icon'
-							src={`https://flagcdn.com/w20/${
-								movie.original_language === 'en'
-									? 'gb'
-									: movie.original_language === 'ja'
-									? 'jp'
-									: movie.original_language === 'zh'
-									? 'cn'
-									: movie.original_language === 'ko'
-									? 'kr'
-									: movie.original_language
-							}.png`}
+							src={`https://flagcdn.com/w20/${getFlag(movie.original_language)}.png`}
 							alt={movie.original_language}
 						/>
 					)}
 				</p>
-				{/* <p>
+				<p>
 					<strong>Overview:</strong> {movie.overview}
-				</p> */}
+				</p>
 			</div>
 		</div>
 	)
