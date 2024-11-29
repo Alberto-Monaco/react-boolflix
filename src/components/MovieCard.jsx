@@ -1,25 +1,15 @@
+import languageToFlag from '../db/languageFlags'
+
 export default function MovieCard({ movie }) {
+	function getFlag(languageCode) {
+		return languageToFlag[languageCode] || 'unknown'
+	}
 	function getVoteBaseFive(voteAverage) {
 		return Math.ceil(voteAverage / 2)
 	}
 	function Stars(vote_average) {
 		const stars = '★'.repeat(vote_average) + '☆'.repeat(5 - vote_average)
 		return stars
-	}
-	function getCountryCode(languageCode) {
-		const languageToCountry = {
-			en: 'GB',
-			es: 'ES',
-			fr: 'FR',
-			de: 'DE',
-			it: 'IT',
-			pt: 'PT',
-			ru: 'RU',
-			ja: 'JP',
-			ko: 'KR',
-			zh: 'CN'
-		}
-		return languageToCountry[languageCode] || 'unknown'
 	}
 	return (
 		<div
@@ -42,16 +32,19 @@ export default function MovieCard({ movie }) {
 				</p>
 				<p>
 					<strong>Lingua originale:</strong>
-					{getCountryCode(movie.original_language) === 'unknown' ? (
+					{getFlag(movie.original_language) === 'unknown' ? (
 						` non trovata nazionalità`
 					) : (
 						<img
 							className='mx-2 flag-icon'
-							src={`https://flagsapi.com/${getCountryCode(movie.original_language)}/flat/32.png`}
+							src={`https://flagcdn.com/w20/${getFlag(movie.original_language)}.png`}
 							alt={movie.original_language}
 						/>
 					)}
 				</p>
+				{/* <p>
+					<strong>Overview:</strong> {movie.overview}
+				</p> */}
 			</div>
 		</div>
 	)
