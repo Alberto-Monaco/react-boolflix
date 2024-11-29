@@ -24,12 +24,14 @@ export default function MovieCard({ movie }) {
 				</p>
 			</div>
 			<div className='card-body'>
-				<p>Titolo originale: {movie.original_title || movie.original_name}</p>
+				<p>
+					<strong>Titolo originale:</strong> {movie.original_title || movie.original_name}
+				</p>
 				<p>
 					Voto: <span style={{ color: 'gold' }}>{Stars(getVoteBaseFive(movie.vote_average))}</span>
 				</p>
 				<p>
-					Lingua originale:
+					<strong>Lingua originale:</strong>
 					{getFlag(movie.original_language) === 'unknown' ? (
 						` non trovata nazionalità`
 					) : (
@@ -40,6 +42,9 @@ export default function MovieCard({ movie }) {
 						/>
 					)}
 				</p>
+				{/* <p>
+					<strong>Overview:</strong> {movie.overview}
+				</p> */}
 			</div>
 		</div>
 	)
