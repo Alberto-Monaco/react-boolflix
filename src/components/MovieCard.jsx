@@ -18,7 +18,7 @@ export default function MovieCard({ movie }) {
 				backgroundImage: `url(https://image.tmdb.org/t/p/w342/${movie.poster_path})`
 			}}>
 			<div className='p-3 card-title'>
-				<h3 className='text-danger'>{movie.title || movie.name}</h3>
+				<h4 className='text-danger'>{movie.title || movie.name}</h4>
 				<p className='text-warning'>
 					{movie.media_type === 'tv' ? 'Serie TV' : movie.media_type === 'movie' ? 'Film' : movie.media_type}
 				</p>

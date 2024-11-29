@@ -26,11 +26,11 @@ header a {
 
 .card {
 
-    height: 342px;
+    aspect-ratio: 2/3;
+    width: 80%;
     background-size: cover;
     background-position: center;
     transition: all 0.3s ease;
-
 }
 
 .card:hover {
