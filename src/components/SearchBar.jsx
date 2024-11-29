@@ -1,8 +1,6 @@
-export default function SearchBar({ searchText, setSearchText, handleSearch }) {
-	function handleSubmit(e) {
-		e.preventDefault()
-		handleSearch()
-	}
+import { useGlobalContext } from '../context/GlobalContext'
+export default function SearchBar() {
+	const { searchText, setSearchText, handleSubmit } = useGlobalContext()
 
 	return (
 		<form htmlFor='search-text' className='search-bar w-50 d-flex justify-content-end ' onSubmit={handleSubmit}>

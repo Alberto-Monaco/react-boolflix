@@ -1,6 +1,8 @@
+import { useGlobalContext } from '../context/GlobalContext'
 import MovieCard from './MovieCard'
 
-export default function AppMain({ movies }) {
+export default function AppMain() {
+	const { movies } = useGlobalContext()
 	return (
 		<main className='container'>
 			<div className='row row-cols-1 row-cols-md-2 row-cols-lg-3'>
