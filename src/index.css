@@ -30,10 +30,10 @@ header a {
     width: 80%;
     background-size: cover;
     background-position: center;
-    transition: all 0.3s ease;
+
 }
 
 .card:hover {
     background-image: none !important;
-    background-color: black;
+
 }
