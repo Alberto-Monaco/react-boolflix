@@ -12,17 +12,11 @@ export default function MovieCard({ movie }) {
 		return stars
 	}
 	return (
-		<div className='card  bg-dark text-white'>
-			<img
-				className='card-img-top'
-				src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-				alt={movie.title || movie.name}
-				style={{
-					height: '400px',
-					backgroundSize: 'cover',
-					backgroundPosition: 'center'
-				}}
-			/>
+		<div
+			className='card bg-dark text-white'
+			style={{
+				backgroundImage: `url(https://image.tmdb.org/t/p/w342/${movie.poster_path})`
+			}}>
 			<div className='p-3 card-title'>
 				<h3 className='text-danger'>{movie.title || movie.name}</h3>
 				<p className='text-warning'>

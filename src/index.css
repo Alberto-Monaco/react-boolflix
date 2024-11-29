@@ -13,3 +13,27 @@ header {
 header a {
     text-decoration: none;
 }
+
+.card .card-title,
+.card .card-body {
+    display: none;
+}
+
+.card:hover .card-title,
+.card:hover .card-body {
+    display: block;
+}
+
+.card {
+
+    height: 342px;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s ease;
+
+}
+
+.card:hover {
+    background-image: none !important;
+    background-color: black;
+}
