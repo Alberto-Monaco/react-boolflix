@@ -30,6 +30,7 @@ header a {
     width: 80%;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 
 }
 
