@@ -1,16 +1,11 @@
 import languageToFlag from '../db/languageFlags'
+import Stars from './Stars'
 
 export default function MovieCard({ movie }) {
 	function getFlag(languageCode) {
 		return languageToFlag[languageCode] || 'unknown'
 	}
-	function getVoteBaseFive(voteAverage) {
-		return Math.ceil(voteAverage / 2)
-	}
-	function Stars(vote_average) {
-		const stars = '★'.repeat(vote_average) + '☆'.repeat(5 - vote_average)
-		return stars
-	}
+
 	return (
 		<div
 			className='card bg-dark text-white'
@@ -28,7 +23,10 @@ export default function MovieCard({ movie }) {
 					<strong>Titolo originale:</strong> {movie.original_title || movie.original_name}
 				</p>
 				<p>
-					Voto: <span style={{ color: 'gold' }}>{Stars(getVoteBaseFive(movie.vote_average))}</span>
+					Voto:{' '}
+					<span style={{ color: 'gold' }}>
+						<Stars vote_average={movie.vote_average} />
+					</span>
 				</p>
 				<p>
 					<strong>Lingua originale:</strong>
